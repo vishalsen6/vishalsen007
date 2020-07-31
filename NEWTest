@@ -1,0 +1,8 @@
+ef on_capture_button_clicked(self):
+    self.running=False
+    #self.timer.stop()
+    self.pic = 'dataset\\'+str(datetime.datetime.now()) + '.jpg'
+    self.pic=self.raw_string(self.pic)
+    print(self.pic)
+    #print(type(self.image))
+    cv2.imwrite(self.pic, self.image)
